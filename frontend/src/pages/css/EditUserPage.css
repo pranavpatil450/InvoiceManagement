@@ -1,0 +1,23 @@
+.edit-user-page {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .edit-user-page h2 {
+    text-align: center;
+  }
+  
+  .edit-user-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .edit-user-page input,
+  .edit-user-page select,
+  .edit-user-page button {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  

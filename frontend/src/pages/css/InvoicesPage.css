@@ -1,0 +1,36 @@
+.invoices-container {
+  padding: 20px;
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.invoice-table th,
+.invoice-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.invoice-table th {
+  background-color: #f5f5f5;
+}
+
+.error {
+  color: red;
+}
+
+.filter-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-form input,
+.filter-form button {
+  padding: 8px;
+  font-size: 14px;
+}
