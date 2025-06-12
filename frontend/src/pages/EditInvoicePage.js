@@ -12,7 +12,7 @@ function EditInvoicePage() {
       try {
         const token = localStorage.getItem('token');
         const res = await fetch(
-          `http://localhost:4000/api/invoices?financialYear=${financialYear}&invoiceNumber=${invoiceNumber}`,
+          `${process.env.REACT_APP_API_BASE_URL}/api/invoices?financialYear=${financialYear}&invoiceNumber=${invoiceNumber}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
