@@ -28,7 +28,7 @@ function InvoicesPage() {
         params.append('endDate', endDate);
       }
 
-      const response = await fetch(`http://localhost:4000/api/invoices?${params.toString()}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/invoices?${params.toString()}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -50,7 +50,7 @@ function InvoicesPage() {
     if (!window.confirm("Delete this invoice?")) return;
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:4000/api/invoices/${invoiceNumber}/${financialYear}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/invoices/${invoiceNumber}/${financialYear}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`

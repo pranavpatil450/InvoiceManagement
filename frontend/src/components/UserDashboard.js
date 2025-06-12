@@ -47,7 +47,7 @@ function UserDashboard() {
 
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://localhost:4000/api/users/${userId}`, {
+      const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/users/${userId}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },
       });

@@ -38,7 +38,7 @@ function EditInvoicePage() {
     try {
       const token = localStorage.getItem('token');
       const res = await fetch(
-        `http://localhost:4000/api/invoices/${invoiceNumber}/${financialYear}`, // keep using original route
+        `${process.env.REACT_APP_API_BASE_URL}/api/invoices/${invoiceNumber}/${financialYear}`, // keep using original route
         {
           method: 'PUT',
           headers: {

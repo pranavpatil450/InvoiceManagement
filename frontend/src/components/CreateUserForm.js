@@ -21,7 +21,7 @@ const CreateUserForm = ({ onUserCreated }) => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:4000/api/users/create', {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/users/create`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

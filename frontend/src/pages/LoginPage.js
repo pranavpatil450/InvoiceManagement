@@ -15,7 +15,7 @@ function LoginPage() {
     const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone; // 👈 Get local timezone
 
     try {
-      const response = await fetch("http://localhost:4000/api/auth/login", {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password, timezone }), // 👈 include timezone

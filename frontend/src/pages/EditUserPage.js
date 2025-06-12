@@ -16,7 +16,7 @@ function EditUserPage() {
     const fetchUser = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await fetch(`http://localhost:4000/api/users/${id}`, {
+        const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/users/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();
